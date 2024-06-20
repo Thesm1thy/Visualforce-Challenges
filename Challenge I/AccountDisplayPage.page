@@ -1,0 +1,14 @@
+<apex:page controller="AccountDisplayController">
+    <apex:form>
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:pageBlock title="Account Details">
+                <apex:pageBlockSection title="info" columns="2">
+                    <apex:outputField value="{!acc.Name}" label="Account Name"/>
+                    <apex:outputField value="{!acc.Industry}" label="Industry"/>
+                    <apex:outputField value="{!acc.Phone}" label="Phone"/>
+                    <apex:outputField value="{!acc.Website}" label="Website"/>
+                    <apex:outputField value="{!acc.Rating}" label="Rating"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>
