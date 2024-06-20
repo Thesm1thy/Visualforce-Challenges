@@ -1,0 +1,18 @@
+<apex:page controller="PaginatedAccountsController">
+    <apex:form>
+        <apex:pageBlock title="Paginated Accounts">
+            <apex:pageBlockTable value="{!accounts}" var="acc">
+                <apex:column headerValue="Account Name">
+                    <apex:outputLink value="/{!acc.Id}">{!acc.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column value="{!acc.Industry}" headerValue="Industry"/>
+                <apex:column value="{!acc.Phone}" headerValue="Phone"/>
+            </apex:pageBlockTable>
+
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Previous" action="{!previousPage}" disabled="{!pageNumber == 1}"/>
+                <apex:commandButton value="Next" action="{!nextPage}" disabled="{!pageNumber == totalPages}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
