@@ -1,0 +1,27 @@
+<apex:page controller="SingleAccountController" renderAs="pdf">
+    <apex:form >
+        
+        
+        <div class ="pageBlock">
+            <h2>Account Details</h2>
+            <div class="pageBlockSection">
+                <div class="label">Account Name</div>
+                <div class="value"><apex:outputField value="{!account.Name}" label="Account Name"/></div>
+                <div class="label">Industry</div>
+                <div class="value"><apex:outputField value="{!account.Industry}" label="Industry"/></div>
+                <div class="label">Phone</div>
+                <div class="value"><apex:outputField value="{!account.Phone}" label="Phone"/></div>
+                <div class="label">Website</div>
+                <div class="value"><apex:outputField value="{!account.Website}" label="Website"/></div>
+                
+            </div>
+            
+            <div class="pageBlockSection">
+                <div class="label">About Me</div>
+                <div class="value"><apex:outputText value="{!aboutMe}"/></div>
+            </div>
+            
+        </div>
+        
+    </apex:form>
+</apex:page>
