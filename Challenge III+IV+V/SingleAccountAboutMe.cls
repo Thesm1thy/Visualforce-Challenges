@@ -11,7 +11,6 @@ public class SingleAccountController {
 
     // Method to fetch the account
     private void fetchAccount() {
-        // Replace 'YOUR_ACCOUNT_ID' with the actual account Id you want to display
         List<Account> accountId = [SELECT Id From Account WHERE Name = 'GenePoint'];
         account = [SELECT Id, Name, Industry, Phone, Website FROM Account WHERE Id = :accountId LIMIT 1];
     }
